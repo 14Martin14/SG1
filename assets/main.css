@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #333333;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #0072ff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s ease;
+}
+a.active,
+a:hover {
+  border-left: 5px solid #0072ff;
+  color: #0072ff;
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 860px) {
+  .sidebar {
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+  span {
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a {
+    height: 60px;
+  }
+  .sidebar a i {
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+body {
+  background-color: #0072ff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.mainn {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  color: #fff;
+  font-size: 60px;
+}
+
+.join {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+}
+
+.staff {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  color: white;
+}
+
+.fa {
+  font-size: 50px;
+}
+/* Whole html box designing */
+html {
+    box-sizing: border-box;
+}
+      
+/* Body width fixing */
+body {
+    max-width: 100%;
+}
+      
+/* Box sizing depending on parent */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+      
+/* Styling column */
+.column {
+    float: left;
+    width: 33%;
+    margin-bottom: 16px;
+    padding: 2px 10px;
+}
+      
+/* Column width change depends
+    on screen size */
+@media screen and (max-width: 670px) {
+    .column {
+        width: 100%;
+        text-align: none;
+    }
+}
+      
+/* Card designing */
+.card {
+    background-color: #0066CC;
+}
+      
+.container {
+    padding: 0 16px;
+}
+      
+/* Icon styling */
+.fa {
+    margin: 10px;
+    font-size:68px;
+}
+      
+.fa:hover {
+    transform: rotateY(180deg);
+    transition: transform 0.8s;
+}
+      
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+      
+/* Button designing */
+.button {
+    border: none;
+    padding: 8px;
+    color: white;
+    background-color: #449D44;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+      
+/* Hover effect on button */
+.button:hover {
+    background-color: green;
+}
+.div{
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  }
+  .div:hover {
+   opacity: 1
+  }
+/* Margin first member of team */
+#gfg {
+    float: none;
+    margin: auto;
+}
